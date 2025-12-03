@@ -1,0 +1,109 @@
+.banner {
+  position: relative;
+  width: 100%;
+  padding: 4rem 0 3rem;
+  min-height: 600px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* NUEVO */
+  align-items: center;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: #0e7fa5;
+  color: white;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem; /* NUEVO */
+  z-index: 2;
+  margin-bottom: 1.5rem; /* NUEVO */
+  flex-wrap: wrap;
+}
+
+.heroIcon {
+  width: 220px;
+}
+
+.separator {
+  width: 3px;
+  height: 150px;
+  background: white;
+  opacity: 0.85;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.4rem; /* NUEVO */
+  padding-left: 20px;
+}
+
+.subTitle {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mainTitle {
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.bottomText {
+  font-size: 40px;
+  font-weight: 700;
+  max-width: 1000px;
+  z-index: 2;
+
+  margin-top: 1.8rem; /* NUEVO */
+  padding-left: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+
+  text-align: center; /* NUEVO */
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .subTitle {
+    font-size: 48px;
+  }
+  .mainTitle {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .textBlock {
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .subTitle,
+  .mainTitle {
+    text-align: center;
+  }
+}

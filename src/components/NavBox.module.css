@@ -1,0 +1,41 @@
+.box {
+  background: white;
+  border-radius: 8px;
+  padding: 16px 0; /* quitar padding lateral */
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* sin huecos verticales */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  overflow: hidden; /* evita sobresalir */
+}
+
+/* Ítems */
+.item {
+  display: block; /* ocupa todo el ancho */
+  width: 100%; /* asegura ocupación total */
+  padding: 10px 18px; /* padding interno */
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0; /* sin bordes redondeados internos */
+  transition: background 0.15s ease;
+}
+
+/* Hover → gris claro */
+.item:hover {
+  background: #cecdcd;
+}
+
+/* Al hacer clic → pequeña animación */
+.item:active {
+  background: #dddddd; /* gris más oscuro */
+  transform: scale(0.98); /* leve pulsación */
+}
+
+/* Activo → gris más oscuro */
+.active {
+  background: #b0afaf;
+}

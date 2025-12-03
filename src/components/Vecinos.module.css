@@ -1,0 +1,70 @@
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.hero {
+  width: 100%;
+  display: flex;
+  min-height: 630px;
+}
+
+/* ===== CONTENEDOR IZQUIERDO ===== */
+.left {
+  width: 50%;
+  padding: 60px 40px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(180deg, #24a9d9 0%, #0e76a4 45%, #00548a 100%);
+  overflow: hidden; /* <<< CLAVE */
+}
+
+.leftTitle {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  z-index: 2;
+}
+
+/* Imagen PNG decorativa, sin tocar su contenido */
+.loopImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%) scale(1); /* ZOOM controlado */
+
+  width: auto;
+  height: 120%; /* cubre vertical y mantiene proporción */
+
+  pointer-events: none;
+}
+
+/* ===== CONTENEDOR DERECHO ===== */
+.right {
+  width: 50%;
+  padding: 80px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #0088a8;
+  color: white;
+}
+
+.rightTitle {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.rightDescription {
+  font-size: 22px;
+  font-weight: 600;
+  max-width: 700px;
+
+  line-height: 1.6; /* Espaciado vertical suave */
+  letter-spacing: 1px; /* Sutil, muy profesional */
+  margin-top: 16px; /* Separación del título */
+}

@@ -1,0 +1,51 @@
+/* Contenedor general que se adapta */
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background: #0088a8;
+}
+
+/* Vista inicial con 2 botones */
+.container {
+  background: #0088a8;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  padding: 40px 0;
+}
+
+/* Contenedor del formulario cuando se abre */
+.formContainer {
+  width: 100%;
+
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 6px;
+
+  /* CENTRAR EL FORMULARIO */
+  margin: 0 auto;
+
+  /* SOMBRA ELEVADA PARA “TOMAR EL CONTROL” */
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.22);
+
+  /* Transición suave de altura */
+  transition: all 0.3s ease;
+}
+
+/* Botón VOLVER */
+.backBtn {
+  background: transparent;
+  border: none;
+  color: #00548a;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}

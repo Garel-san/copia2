@@ -1,0 +1,110 @@
+/* CONTENEDOR EXTERNO (full-width) */
+/* CONTENEDOR EXTERNO (full width sin espacios) */
+.section {
+  width: 100%;
+  padding: 0; /* no debe tener padding */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 650px;
+}
+
+/* CONTENEDOR INTERNO (ocupa 100% del ancho sin límite) */
+.inner {
+  width: 100%;
+  max-width: none; /* elimina el límite de 1200px */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; /* las columnas se tocan */
+}
+
+/* TARJETA IZQUIERDA (Nuestra Misión) */
+.cardLeft {
+  background: #ffffff;
+
+  padding: 4rem 2rem; /* más aire, igual al diseño */
+  color: #004b76;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* centrado total */
+  text-align: center; /* convierte el texto en cascada */
+
+  gap: 1.5rem;
+}
+.cardLeft h2 {
+  font-size: 3.2rem; /* igual al sitio */
+  font-weight: 800;
+  margin: 0;
+}
+
+.cardLeft p {
+  max-width: 480px; /* ❗ CREA la cascada real */
+  font-size: 1.4rem;
+  line-height: 1.55;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* TARJETA CENTRAL (Valores Fundamentales) */
+.center {
+  background: #003f76; /* azul profundo */
+  padding: clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0; /* plano como en el original */
+}
+
+.center img {
+  width: 100%;
+  max-width: clamp(280px, 40vw, 520px);
+}
+
+/* TARJETA DERECHA (Nuestra Visión) */
+.cardRight {
+  background: #00a8a0;
+
+  padding: 4rem 2rem;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* igual que la misión */
+  text-align: center;
+
+  gap: 1.5rem;
+}
+
+.cardRight h2 {
+  font-size: 3.2rem; /* igual al sitio */
+  font-weight: 800;
+  margin: 0;
+}
+
+.cardRight p {
+  max-width: 480px; /* ❗ CREA la cascada real */
+  font-size: 1.4rem;
+  line-height: 1.55;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .center {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,77 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background-color: rgb(16, 92, 153);
+}
+
+/* Área desplazable más inteligente */
+.scrollArea {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  padding: 10px 0; /* ❗ nada de padding horizontal */
+  margin: 0; /* ❗ que NO se centre solo */
+  width: 100%;
+}
+
+.scrollArea::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==== FLECHAS ==== */
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #00548a;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 15;
+}
+
+.arrow:hover {
+  background: #e9f7ff;
+}
+
+.left {
+  left: 4px;
+}
+
+.right {
+  right: 4px;
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* En móviles, flechas más pequeñas y menos intrusivas */
+@media (max-width: 540px) {
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 26px;
+  }
+
+  .scrollArea {
+    padding: 10px 10px;
+    gap: 16px;
+  }
+}
+
+/* Tablets medianas: flechas un poco más chicas */
+@media (max-width: 900px) {
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}

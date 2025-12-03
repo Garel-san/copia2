@@ -1,0 +1,77 @@
+.card {
+  width: 100%;
+  max-width: 500px; /* ANCHO MÁXIMO */
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Miniatura dinámica */
+.thumbnail {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.textBox {
+  padding: 16px;
+
+  /* NUEVO: para igualar el estilo visual del diseño → centrado */
+  text-align: center;
+}
+
+/* =============================
+   TÍTULO MODERNIZADO (estilo de la imagen)
+   ============================= */
+.title {
+  font-size: 22px; /* más grande y notorio, como el ejemplo */
+  font-weight: 800; /* fuerte estilo institucional */
+  margin-bottom: 8px;
+
+  color: #004b93; /* azul institucional del sitio */
+  line-height: 1.25;
+
+  /* TRUNCADO → SOLO si querés mantenerlo */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =============================
+   DESCRIPCIÓN CASCADA
+   ============================= */
+.description {
+  font-size: 18px;
+  font-weight: 600;
+  color: #004b93;
+  line-height: 1.2;
+
+  /* texto suave y claro */
+  margin-top: 6px;
+
+  /* Igual al modelo: centrado */
+  text-align: center;
+}
+
+/* ====== RESPONSIVE ====== */
+
+@media (max-width: 540px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 541px) and (max-width: 900px) {
+  .card {
+    max-width: 320px;
+  }
+}
