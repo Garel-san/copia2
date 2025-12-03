@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-  max-width: 500px; /* ANCHO MÁXIMO */
+  max-width: 400px; /* ANCHO MÁXIMO */
   background: white;
   border-radius: 16px;
   overflow: hidden;
@@ -33,8 +33,8 @@
    TÍTULO MODERNIZADO (estilo de la imagen)
    ============================= */
 .title {
-  font-size: 22px; /* más grande y notorio, como el ejemplo */
-  font-weight: 800; /* fuerte estilo institucional */
+  font-size: 20px; /* más grande y notorio, como el ejemplo */
+  font-weight: 700; /* fuerte estilo institucional */
   margin-bottom: 8px;
 
   color: #004b93; /* azul institucional del sitio */
@@ -50,28 +50,14 @@
    DESCRIPCIÓN CASCADA
    ============================= */
 .description {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: #004b93;
-  line-height: 1.2;
+  line-height: 1.1;
 
   /* texto suave y claro */
   margin-top: 6px;
 
   /* Igual al modelo: centrado */
   text-align: center;
-}
-
-/* ====== RESPONSIVE ====== */
-
-@media (max-width: 540px) {
-  .card {
-    max-width: 300px;
-  }
-}
-
-@media (min-width: 541px) and (max-width: 900px) {
-  .card {
-    max-width: 320px;
-  }
 }

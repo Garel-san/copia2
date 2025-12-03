@@ -1,12 +1,23 @@
+/* Reset básico */
 html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Aplicar box-sizing global */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Tipografías */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  /* height: 100%;  ← eliminar */
 }

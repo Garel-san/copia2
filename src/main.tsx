@@ -1,7 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+
+// Normalizar (primero SIEMPRE)
+import "./normalize.css";
+
+// Estilos globales (SIEMPRE van aquí)
 import "./global.css";
+
+// Componente raíz
+import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

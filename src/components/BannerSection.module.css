@@ -31,7 +31,7 @@
 }
 
 .heroIcon {
-  width: 220px;
+  width: 200px;
 }
 
 .separator {
@@ -44,21 +44,22 @@
 .textBlock {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 0.4rem; /* NUEVO */
-  padding-left: 20px;
+  align-items: center; /* ← CAMBIO: evita desbalance */
+  text-align: center; /* ← CAMBIO */
+  gap: 0.4rem;
+  /* padding-left: 20px;  ← REMOVIDO */
 }
 
 .subTitle {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
+  margin-right: 300px;
 }
 
 .mainTitle {
   font-size: 70px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -74,36 +75,4 @@
   letter-spacing: 0.2rem;
 
   text-align: center; /* NUEVO */
-}
-
-/* RESPONSIVE */
-@media (max-width: 1200px) {
-  .subTitle {
-    font-size: 48px;
-  }
-  .mainTitle {
-    font-size: 58px;
-  }
-}
-
-@media (max-width: 900px) {
-  .row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .textBlock {
-    padding-left: 0;
-    text-align: center;
-    align-items: center;
-  }
-
-  .separator {
-    display: none;
-  }
-
-  .subTitle,
-  .mainTitle {
-    text-align: center;
-  }
 }

@@ -19,7 +19,7 @@
 
 /* COLUMNA 2 — azul profundo */
 .cardCenter {
-  background: #0a4f81;
+  background: rgb(14, 118, 164);
   padding: 3rem 2rem;
   text-align: center;
   color: white;
@@ -42,8 +42,8 @@
 }
 
 .grid p {
-  font-size: clamp(1.6rem, 2vw, 1.25rem);
-  font-weight: 550;
+  font-size: clamp(1.3rem, 2vw, 1.25rem);
+  font-weight: 600;
   max-width: 360px;
   line-height: 1.3;
 }

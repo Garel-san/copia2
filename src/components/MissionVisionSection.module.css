@@ -1,110 +1,96 @@
-/* CONTENEDOR EXTERNO (full-width) */
 /* CONTENEDOR EXTERNO (full width sin espacios) */
 .section {
   width: 100%;
-  padding: 0; /* no debe tener padding */
+  padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
-  min-height: 650px;
+
+  min-height: 180px; /* ↓ antes 220px */
 }
 
 /* CONTENEDOR INTERNO (ocupa 100% del ancho sin límite) */
 .inner {
   width: 100%;
-  max-width: none; /* elimina el límite de 1200px */
+  max-width: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0; /* las columnas se tocan */
+  gap: 0;
 }
 
+/* TARJETA IZQUIERDA (Nuestra Misión) */
 /* TARJETA IZQUIERDA (Nuestra Misión) */
 .cardLeft {
   background: #ffffff;
 
-  padding: 4rem 2rem; /* más aire, igual al diseño */
+  padding: 2.5rem 2rem; /* idéntico a la imagen */
   color: #004b76;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* centrado total */
-  text-align: center; /* convierte el texto en cascada */
+  align-items: center;
+  text-align: center;
 
-  gap: 1.5rem;
+  gap: 1rem; /* más compacto */
 }
+
 .cardLeft h2 {
-  font-size: 3.2rem; /* igual al sitio */
+  font-size: 2.3rem; /* igual tamaño visual */
   font-weight: 800;
   margin: 0;
+  line-height: 1.1; /* mismo espaciado vertical */
 }
 
 .cardLeft p {
-  max-width: 480px; /* ❗ CREA la cascada real */
-  font-size: 1.4rem;
-  line-height: 1.55;
+  max-width: 440px; /* igual ancho de lectura */
+  font-size: 1.1rem; /* más chico para compactar */
+  line-height: 1.45; /* igual fluidez de lectura */
   margin: 0;
   font-weight: 500;
 }
 
 /* TARJETA CENTRAL (Valores Fundamentales) */
 .center {
-  background: #003f76; /* azul profundo */
-  padding: clamp(1rem, 2vw, 1.5rem);
+  background: rgb(22, 95, 154);
+  padding: clamp(0.6rem, 1.2vw, 1rem); /* ↓ más compactado */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0; /* plano como en el original */
+  border-radius: 0;
 }
 
 .center img {
   width: 100%;
-  max-width: clamp(280px, 40vw, 520px);
+  max-width: clamp(240px, 34vw, 460px); /* ↓ antes 280px–520px */
 }
 
 /* TARJETA DERECHA (Nuestra Visión) */
 .cardRight {
-  background: #00a8a0;
+  background: rgb(0, 167, 163);
 
-  padding: 4rem 2rem;
+  padding: 2.2rem 1.5rem; /* ↓ antes 4rem 2rem */
   color: white;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* igual que la misión */
+  align-items: center;
   text-align: center;
 
-  gap: 1.5rem;
+  gap: 1.2rem; /* ↓ antes 1.5rem */
 }
 
 .cardRight h2 {
-  font-size: 3.2rem; /* igual al sitio */
+  font-size: 2.4rem; /* ↓ antes 3.2rem */
   font-weight: 800;
   margin: 0;
 }
 
 .cardRight p {
-  max-width: 480px; /* ❗ CREA la cascada real */
-  font-size: 1.4rem;
-  line-height: 1.55;
+  max-width: 480px;
+  font-size: 1.15rem; /* ↓ antes 1.4rem */
+  line-height: 1.45; /* ↓ antes 1.55 */
   margin: 0;
   font-weight: 500;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .center {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .inner {
-    grid-template-columns: 1fr;
-  }
 }

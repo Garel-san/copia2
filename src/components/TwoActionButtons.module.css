@@ -3,17 +3,18 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  padding: 10px 0;
   background: #0088a8;
 }
 
 /* Vista inicial con 2 botones */
 .container {
-  background: #0088a8;
+  background: linear-gradient(180deg, #00a7a3 0%, #00979b 100%);
+
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 200px;
+  gap: 100px;
   padding: 40px 0;
 }
 

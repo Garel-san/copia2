@@ -51,8 +51,10 @@ export default function Footer() {
 
         {/* CENTRO */}
         <div className={styles.center}>
+          {/* NO CLICABLE – TÍTULO */}
           <h3 className={styles.title}>Participá</h3>
 
+          {/* SÍ CLICABLES */}
           <Link to="/quiero-compartir" className={styles.link}>
             Quiero compartir
           </Link>
@@ -64,16 +66,15 @@ export default function Footer() {
 
         {/* DERECHA */}
         <div className={styles.right}>
-          <h3 className={styles.title}>
-            Sobre el Municipio de <br /> Lomas de Zamora
-          </h3>
-
+          {/* SÍ CLICABLE – PERO CON EL MISMO ESTILO QUE “Participá” */}
           <a
-            className={styles.link}
             href="https://www.lomasdezamora.gov.ar"
             target="_blank"
             rel="noopener noreferrer"
-          ></a>
+            className={styles.titleClickable}
+          >
+            Sobre el Municipio de <br /> Lomas de Zamora
+          </a>
         </div>
       </div>
     </footer>

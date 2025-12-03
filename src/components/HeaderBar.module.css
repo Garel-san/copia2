@@ -3,7 +3,7 @@
   width: 100%;
   padding: 0;
   color: white;
-  min-height: 160px;
+  min-height: 120px;
   display: flex;
   align-items: center;
 
@@ -50,13 +50,13 @@
 
 /* Tamaños de logos */
 .logoMuni {
-  height: 84px;
+  height: 64px;
   width: auto;
   margin-left: 30px;
 }
 
 .logoSecre {
-  height: 160px;
+  height: 130px;
   width: auto;
 }
 
@@ -75,8 +75,8 @@
 
   /* AJUSTES VISUALES PARA IGUALAR EL SITIO REAL */
   font-weight: 800; /* antes: 900 */
-  font-size: 16px; /* antes: 14px */
-  letter-spacing: 1.7px; /* antes: 1px */
+  font-size: 14px; /* antes: 14px */
+
   line-height: 1;
   margin-right: 10px;
   cursor: pointer;
@@ -129,21 +129,4 @@
   opacity: 1;
   transform: translateY(0px);
   pointer-events: auto;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
-  .inner {
-    flex-direction: column;
-    gap: 12px;
-    height: auto;
-    padding: 14px 20px;
-  }
-
-  .nav {
-    gap: 22px;
-    font-size: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
