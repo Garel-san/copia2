@@ -50,3 +50,10 @@
 .backBtn:hover {
   text-decoration: underline;
 }
+@media (max-width: 900px) {
+  .container {
+    gap: 25px; /* ↓ antes 100px → ahora MUCHO más cerca */
+    justify-content: center; /* centrados perfecto */
+    padding: 25px 0; /* menos espacio vertical */
+  }
+}

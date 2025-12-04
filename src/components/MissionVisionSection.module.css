@@ -1,4 +1,7 @@
-/* CONTENEDOR EXTERNO (full width sin espacios) */
+/* =========================================================
+   DISEÑO ORIGINAL (NO MODIFICADO)
+   ========================================================= */
+
 .section {
   width: 100%;
   padding: 0;
@@ -6,10 +9,9 @@
   display: flex;
   justify-content: center;
 
-  min-height: 180px; /* ↓ antes 220px */
+  min-height: 180px;
 }
 
-/* CONTENEDOR INTERNO (ocupa 100% del ancho sin límite) */
 .inner {
   width: 100%;
   max-width: none;
@@ -18,12 +20,9 @@
   gap: 0;
 }
 
-/* TARJETA IZQUIERDA (Nuestra Misión) */
-/* TARJETA IZQUIERDA (Nuestra Misión) */
 .cardLeft {
   background: #ffffff;
-
-  padding: 2.5rem 2rem; /* idéntico a la imagen */
+  padding: 2.5rem 2rem;
   color: #004b76;
 
   display: flex;
@@ -32,44 +31,40 @@
   align-items: center;
   text-align: center;
 
-  gap: 1rem; /* más compacto */
+  gap: 1rem;
 }
 
 .cardLeft h2 {
-  font-size: 2.3rem; /* igual tamaño visual */
+  font-size: 2.3rem;
   font-weight: 800;
   margin: 0;
-  line-height: 1.1; /* mismo espaciado vertical */
+  line-height: 1.1;
 }
 
 .cardLeft p {
-  max-width: 440px; /* igual ancho de lectura */
-  font-size: 1.1rem; /* más chico para compactar */
-  line-height: 1.45; /* igual fluidez de lectura */
+  max-width: 440px;
+  font-size: 1.1rem;
+  line-height: 1.45;
   margin: 0;
   font-weight: 500;
 }
 
-/* TARJETA CENTRAL (Valores Fundamentales) */
 .center {
   background: rgb(22, 95, 154);
-  padding: clamp(0.6rem, 1.2vw, 1rem); /* ↓ más compactado */
+  padding: clamp(0.6rem, 1.2vw, 1rem);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0;
 }
 
 .center img {
   width: 100%;
-  max-width: clamp(240px, 34vw, 460px); /* ↓ antes 280px–520px */
+  max-width: clamp(240px, 34vw, 460px);
 }
 
-/* TARJETA DERECHA (Nuestra Visión) */
 .cardRight {
   background: rgb(0, 167, 163);
-
-  padding: 2.2rem 1.5rem; /* ↓ antes 4rem 2rem */
+  padding: 2.2rem 1.5rem;
   color: white;
 
   display: flex;
@@ -78,19 +73,60 @@
   align-items: center;
   text-align: center;
 
-  gap: 1.2rem; /* ↓ antes 1.5rem */
+  gap: 1.2rem;
 }
 
 .cardRight h2 {
-  font-size: 2.4rem; /* ↓ antes 3.2rem */
+  font-size: 2.4rem;
   font-weight: 800;
   margin: 0;
 }
 
 .cardRight p {
   max-width: 480px;
-  font-size: 1.15rem; /* ↓ antes 1.4rem */
-  line-height: 1.45; /* ↓ antes 1.55 */
+  font-size: 1.15rem;
+  line-height: 1.45;
   margin: 0;
   font-weight: 500;
+}
+
+/* =========================================================
+   NUEVO: RESPONSIVE MOBILE (APILAR TARJETAS)
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Cada tarjeta ocupa todo el ancho */
+  .cardLeft,
+  .center,
+  .cardRight {
+    width: 100%;
+    min-height: auto;
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* Ajustes suaves para mobile */
+  .cardLeft h2,
+  .cardRight h2 {
+    font-size: 2rem;
+  }
+
+  .cardLeft p,
+  .cardRight p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .center {
+    padding: 2rem 1rem;
+  }
+
+  .center img {
+    max-width: 200px;
+  }
 }

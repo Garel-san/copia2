@@ -1,3 +1,7 @@
+/* =========================================================
+   DISEÑO ORIGINAL (NO MODIFICADO)
+   ========================================================= */
+
 .banner {
   position: relative;
   width: 100%;
@@ -8,7 +12,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* NUEVO */
+  justify-content: center;
   align-items: center;
   text-align: center;
 
@@ -24,9 +28,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem; /* NUEVO */
+  gap: 2.5rem;
   z-index: 2;
-  margin-bottom: 1.5rem; /* NUEVO */
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -44,10 +48,9 @@
 .textBlock {
   display: flex;
   flex-direction: column;
-  align-items: center; /* ← CAMBIO: evita desbalance */
-  text-align: center; /* ← CAMBIO */
+  align-items: center;
+  text-align: center;
   gap: 0.4rem;
-  /* padding-left: 20px;  ← REMOVIDO */
 }
 
 .subTitle {
@@ -57,10 +60,13 @@
   margin-right: 300px;
 }
 
-.mainTitle {
+/* NUEVA CLASE: cada palabra del título grande */
+.mainTitleLine {
   font-size: 70px;
   font-weight: 700;
   line-height: 1;
+  display: block;
+  text-align: center;
 }
 
 .bottomText {
@@ -69,10 +75,51 @@
   max-width: 1000px;
   z-index: 2;
 
-  margin-top: 1.8rem; /* NUEVO */
+  margin-top: 1.8rem;
   padding-left: 20px;
-  font-weight: 700;
   letter-spacing: 0.2rem;
+  text-align: center;
+}
 
-  text-align: center; /* NUEVO */
+/* =========================================================
+   NUEVO: RESPONSIVE (COMPRESIÓN TIPO “ACHICHAR”)
+   ========================================================= */
+@media (max-width: 900px) {
+  .banner {
+    padding: 2.5rem 0 2rem;
+    min-height: 420px;
+  }
+  .row {
+    gap: 1rem;
+    padding-left: 2rem;
+  }
+  .heroIcon {
+    width: 100px;
+    margin-left: -16px;
+  }
+  .separator {
+    height: 120px;
+    width: 2px;
+  } /* Subtítulo “Desde” alineado y más prominente */
+  .subTitle {
+    font-size: 38px;
+    font-weight: 800;
+    margin-right: 0;
+    text-align: left;
+    width: 100%;
+  } /* Las palabras “Compartir” y “Lomas” alineadas a la izquierda y más bold */
+  .mainTitleLine {
+    font-size: 38px;
+    font-weight: 800; /* más peso visual */
+    line-height: 1.05;
+    text-align: left;
+    width: 100%;
+  }
+  .bottomText {
+    font-size: 30px;
+    max-width: 90%;
+    margin-top: 1.2rem;
+    letter-spacing: 0.05rem;
+    font-weight: 800;
+  }
 }

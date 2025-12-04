@@ -91,3 +91,66 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
+/* =========================================================
+   RESPONSIVE FOOTER (100% width, una sola columna)
+   ========================================================= */
+
+@media (max-width: 900px) {
+  /* El grid desaparece y pasa a columna */
+  .inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  /* Columna izquierda */
+  .left {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .socialRow {
+    margin-top: 18px;
+  }
+
+  .copy,
+  .address {
+    margin-top: 14px;
+    font-size: 15px;
+  }
+
+  /* Columna centro */
+  .center {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .title {
+    margin-bottom: 4px;
+    font-size: 17px;
+  }
+
+  .link {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+
+  /* Columna derecha */
+  .right {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .titleClickable {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+}

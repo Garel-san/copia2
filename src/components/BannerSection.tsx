@@ -8,7 +8,6 @@ export default function BannerSection() {
       className={styles.banner}
       style={{ backgroundImage: `url(${Lomasloop})` }}
     >
-      {/* CONTENEDOR CENTRAL */}
       <div className={styles.row}>
         <img
           src={Logohero}
@@ -20,7 +19,10 @@ export default function BannerSection() {
 
         <div className={styles.textBlock}>
           <span className={styles.subTitle}>Desde</span>
-          <span className={styles.mainTitle}>Compartir Lomas</span>
+
+          {/* Separación correcta: cada palabra una línea */}
+          <span className={styles.mainTitleLine}>Compartir</span>
+          <span className={styles.mainTitleLine}>Lomas</span>
         </div>
       </div>
 

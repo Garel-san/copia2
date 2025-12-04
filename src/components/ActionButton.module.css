@@ -67,3 +67,19 @@
 .wrapper:hover .buttonBox {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.22);
 }
+
+@media (max-width: 900px) {
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .buttonBox {
+    margin-top: 40px; /* un pelín más espacioso en mobile */
+  }
+
+  .label {
+    text-align: center; /* centra el texto */
+    white-space: pre-line; /* permite saltos de línea */
+    line-height: 1.2;
+  }
+}

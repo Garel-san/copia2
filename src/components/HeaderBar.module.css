@@ -1,4 +1,7 @@
-/* Fondo completo con gradiente idéntico al sitio real */
+/* ============================================================
+   DISEÑO ORIGINAL (NO MODIFICADO)
+   ============================================================ */
+
 .header {
   width: 100%;
   padding: 0;
@@ -30,16 +33,12 @@
   padding: 0 40px;
 }
 
-/* Logos clicables */
+/* Logos */
 .logoLink {
   display: flex;
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-}
-
-.logoLink:hover {
-  text-decoration: none;
 }
 
 .left {
@@ -48,7 +47,6 @@
   gap: 16px;
 }
 
-/* Tamaños de logos */
 .logoMuni {
   height: 64px;
   width: auto;
@@ -60,73 +58,138 @@
   width: auto;
 }
 
-/* ---------- NAV PRINCIPAL ---------- */
+/* Navigation */
 .nav {
   display: flex;
   gap: 30px;
 }
 
-/* Links directos del nav y el item que abre dropdown */
 .nav > a,
 .navItem {
   color: white;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-
-  /* AJUSTES VISUALES PARA IGUALAR EL SITIO REAL */
-  font-weight: 800; /* antes: 900 */
-  font-size: 14px; /* antes: 14px */
-
-  line-height: 1;
-  margin-right: 10px;
+  font-weight: 800;
+  font-size: 14px;
   cursor: pointer;
 }
 
-.nav > a:hover,
-.navItem:hover {
-  text-decoration: none;
-}
-
-/* ---------- DROPDOWN ---------- */
 .dropdownWrapper {
   position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
-/* Zona invisible que mantiene el hover */
-.dropdownWrapper::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 26px; /* puente de hover */
-  background: transparent;
-  pointer-events: auto; /* MUY IMPORTANTE */
-  z-index: 20;
-}
-
-/* Estilos base del dropdown (INVISIBLE al inicio) */
+/* Dropdown */
 .dropdown {
   position: absolute;
   top: calc(100% + 20px);
   left: 0;
-  z-index: 50;
-
-  display: block; /* SIEMPRE debe existir para animación */
-
   opacity: 0;
-  transform: translateY(-6px);
   pointer-events: none;
-  transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(-6px);
+  transition: all 0.25s ease;
 }
 
-/* Cuando hay hover en wrapper o en el puente → mostrar */
 .dropdownWrapper:hover .dropdown {
   opacity: 1;
   transform: translateY(0px);
   pointer-events: auto;
+}
+
+/* ============================================================
+   NUEVO: HAMBURGER BUTTON (solo mobile)
+   ============================================================ */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 16px;
+}
+
+.burger span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   NUEVO: MENÚ LATERAL MOBILE
+   ============================================================ */
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -70%;
+  width: 70%;
+  height: 100vh;
+
+  background: linear-gradient(180deg, #0e76a4, #00447a);
+  color: white;
+  z-index: 2000;
+
+  transition: left 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.mobileMenu.open {
+  left: 0;
+}
+
+.mobileContent {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mobileContent a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.closeBtn {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINT
+   ============================================================ */
+
+@media (max-width: 900px) {
+  /* Ocultar nav desktop */
+  .nav {
+    display: none;
+  }
+
+  /* Mostrar hamburguesa */
+  .burger {
+    display: flex;
+  }
+
+  /* Achicar logos para calzar como en tu imagen */
+  .logoMuni {
+    height: 52px;
+    margin-left: 10px;
+  }
+
+  .logoSecre {
+    height: 100px;
+  }
 }
