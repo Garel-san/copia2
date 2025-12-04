@@ -24,14 +24,16 @@
   color: white;
 }
 
-.row {
+/* ====== DESKTOP ====== */
+.rowDesktop {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  z-index: 2;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+}
+
+.rowMobile {
+  display: none;
 }
 
 .heroIcon {
@@ -45,28 +47,41 @@
   opacity: 0.85;
 }
 
-.textBlock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.4rem;
-}
-
-.subTitle {
+.subTitleDesktop {
   font-size: 60px;
   font-weight: 600;
   line-height: 1;
-  margin-right: 300px;
 }
 
-/* NUEVA CLASE: cada palabra del título grande */
+.mainTitleDesktop {
+  font-size: 70px;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+/* ====== MOBILE (título en cascada) ====== */
+.textMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.2rem;
+}
+
+.subTitleMobile {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Palabras “Compartir” y “Lomas” */
 .mainTitleLine {
   font-size: 70px;
   font-weight: 700;
   line-height: 1;
   display: block;
-  text-align: center;
+  text-align: left;
 }
 
 .bottomText {
@@ -82,39 +97,49 @@
 }
 
 /* =========================================================
-   NUEVO: RESPONSIVE (COMPRESIÓN TIPO “ACHICHAR”)
+   RESPONSIVE (SWITCH A MOBILE)
    ========================================================= */
 @media (max-width: 900px) {
   .banner {
     padding: 2.5rem 0 2rem;
     min-height: 420px;
   }
-  .row {
+
+  /* Oculta Desktop, activa Mobile */
+  .rowDesktop {
+    display: none;
+  }
+  .rowMobile {
+    display: flex;
+    align-items: center;
     gap: 1rem;
     padding-left: 2rem;
   }
+
   .heroIcon {
-    width: 100px;
+    width: 110px;
     margin-left: -16px;
   }
+
   .separator {
     height: 120px;
     width: 2px;
-  } /* Subtítulo “Desde” alineado y más prominente */
-  .subTitle {
+  }
+
+  /* Desde */
+  .subTitleMobile {
     font-size: 38px;
     font-weight: 800;
-    margin-right: 0;
-    text-align: left;
-    width: 100%;
-  } /* Las palabras “Compartir” y “Lomas” alineadas a la izquierda y más bold */
+  }
+
+  /* Compartir / Lomas */
   .mainTitleLine {
     font-size: 38px;
-    font-weight: 800; /* más peso visual */
-    line-height: 1.05;
-    text-align: left;
+    font-weight: 800;
     width: 100%;
+    line-height: 1.05;
   }
+
   .bottomText {
     font-size: 30px;
     max-width: 90%;
